@@ -1,5 +1,5 @@
 
-/**
+/*
  * Autor:  ba3
  * Correo: lbatres@freelancerdevelopers.com
  * Majeador: 10.4.11-MariaDB
@@ -15,7 +15,7 @@ CREATE TABLE tienda_freelancer.TBL_Usuarios (
 	email_usuario varchar(255) NOT NULL,
 	password_usuario varchar(255) NOT NULL,
 	rol_usuario varchar(20) NOT NULL,
-	avatar_usuario varchar(100) NOT NULL,
+	avatar_usuario varchar(100),/* NOT NULL */
 	CONSTRAINT TBL_Usuarios_PK PRIMARY KEY (id_usuario)
 )
 ENGINE=InnoDB
@@ -47,7 +47,7 @@ CREATE TABLE tienda_freelancer.TBL_Productos (
 	precio_producto FLOAT(100,2) NOT NULL,
 	stock_producto INT(255) NOT NULL,
 	oferta_producto varchar(10) NULL,
-	imageb_producto varchar(255) NOT NULL,
+	imagen_producto varchar(255) NOT NULL,
 	fecha_producto DATE,
 	CONSTRAINT TBL_Productos_PK PRIMARY KEY (id_producto),
 	CONSTRAINT TBL_Productos_FK FOREIGN KEY (id_categoria) REFERENCES tienda_freelancer.TBL_Categorias(id_categoria)

@@ -13,7 +13,7 @@ class Utils{
     public static function isAdmin() {
         if(isset($_SESSION['admin'])){
         }else{
-            header("Location:".base_url."");
+            #header("Location:".base_url."");
         }
     }
     

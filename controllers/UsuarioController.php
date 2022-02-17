@@ -10,9 +10,10 @@ class usuarioController{
     
     public function save(){
         if(isset($_POST)){
-            $nombre   = isset($_POST['nombre'])   ? $_POST['nombre']   : false;
-            $email    = isset($_POST['email'])    ? $_POST['email']    : false;
-            $password = isset($_POST['password']) ? $_POST['password'] : false;
+            $nombre   = $_POST['nombre']   ?? false;
+            $email    = $_POST['email']    ?? false;
+            $password = $_POST['password'] ?? false;
+            
             if( $nombre && $email && $password){
                 $usuario = new Usuario();
                 $usuario->setNombre_usuario($nombre);

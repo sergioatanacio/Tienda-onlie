@@ -71,14 +71,14 @@ class productoController{
                 $producto->save(); 
              }
              
-             header("Location:".base_url."producto/gestion");
+             #header("Location:".base_url."producto/gestion");
            }else{
              $_SESSION['register'] = "failed";
-             header("Location:".base_url."producto/gestion");
+             #header("Location:".base_url."producto/gestion");
             }
          }else{
              $_SESSION['register'] = "failed";
-             header("Location:".base_url."producto/gestion");
+             #header("Location:".base_url."producto/gestion");
          }
     }
     
